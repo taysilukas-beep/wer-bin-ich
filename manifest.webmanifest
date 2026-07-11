@@ -1,0 +1,16 @@
+{
+  "name": "Wer bin ich?",
+  "short_name": "Wer bin ich?",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#121826",
+  "theme_color": "#121826",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
