@@ -1,4 +1,4 @@
-const cacheName = "wer-bin-ich-v1";
+const cacheName = "wer-bin-ich-v2";
 const assets = [
   "./",
   "./index.html",
