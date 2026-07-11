@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#121826">
+    <title>Wer bin ich?</title>
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Partyspiel</p>
+          <h1>Wer bin ich?</h1>
+        </div>
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Darstellung wechseln" title="Darstellung wechseln">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3a1 1 0 0 1 1 1v1.2a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1Zm0 14.8a4.8 4.8 0 1 0 0-9.6 4.8 4.8 0 0 0 0 9.6ZM4.93 4.93a1 1 0 0 1 1.41 0l.85.85a1 1 0 0 1-1.41 1.41l-.85-.85a1 1 0 0 1 0-1.41Zm12.88.85.85-.85a1 1 0 1 1 1.41 1.41l-.85.85a1 1 0 0 1-1.41-1.41ZM3 12a1 1 0 0 1 1-1h1.2a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Zm15.8 0a1 1 0 0 1 1-1H21a1 1 0 1 1 0 2h-1.2a1 1 0 0 1-1-1ZM5.78 16.81a1 1 0 0 1 1.41 1.41l-.85.85a1 1 0 1 1-1.41-1.41l.85-.85Zm12.03 1.41a1 1 0 1 1 1.41-1.41l.85.85a1 1 0 1 1-1.41 1.41l-.85-.85ZM12 17.8a1 1 0 0 1 1 1V20a1 1 0 1 1-2 0v-1.2a1 1 0 0 1 1-1Z"/></svg>
+        </button>
+      </header>
+
+      <section class="play-area" aria-live="polite">
+        <div class="identity-display" id="identityDisplay">
+          <p class="status-label" id="statusLabel">Bereit</p>
+          <h2 id="identityName">Kategorie wählen</h2>
+          <p id="identityHint">Zufall starten oder eine Figur auswählen.</p>
+        </div>
+
+        <div class="quick-actions">
+          <button class="primary-button" id="randomButton" type="button">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16.5 3.5a1 1 0 0 1 1.42 0l2.58 2.59a1 1 0 0 1 0 1.41l-2.58 2.59a1 1 0 0 1-1.42-1.42L17.38 8H16a5 5 0 0 0-4.1 2.14l-3.8 5.43A7 7 0 0 1 2.36 18H2a1 1 0 1 1 0-2h.36a5 5 0 0 0 4.1-2.14l3.8-5.43A7 7 0 0 1 16 6h1.38l-.88-.88a1 1 0 0 1 0-1.42ZM2 6h.36a7 7 0 0 1 5.74 3l.72 1.03-1.2 1.71-1.16-1.6A5 5 0 0 0 2.36 8H2a1 1 0 0 1 0-2Zm13.92 10h1.46l-.88-.88a1 1 0 1 1 1.42-1.42l2.58 2.59a1 1 0 0 1 0 1.41l-2.58 2.59a1 1 0 0 1-1.42-1.42l.88-.87h-1.46a7 7 0 0 1-5.74-3l-.68-.97 1.2-1.72 1.12 1.55A5 5 0 0 0 15.92 16Z"/></svg>
+            Zufall
+          </button>
+          <button class="secondary-button" id="hideButton" type="button">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3.7 2.29a1 1 0 0 0-1.41 1.42l3 2.99A12.46 12.46 0 0 0 2 12s3.75 7 10 7a9.9 9.9 0 0 0 4.55-1.12l3.74 3.83a1 1 0 0 0 1.42-1.42l-18-18ZM12 17c-4.02 0-6.87-3.82-7.88-5a11.03 11.03 0 0 1 2.6-3.88l2.02 2.02A3.43 3.43 0 0 0 8.5 12a3.5 3.5 0 0 0 3.5 3.5c.64 0 1.24-.17 1.75-.47l1.3 1.33A7.86 7.86 0 0 1 12 17Zm-.09-3.5A1.5 1.5 0 0 1 10.5 12c0-.13.02-.25.05-.37l1.82 1.82c-.14.03-.3.05-.46.05ZM12 5c6.25 0 10 7 10 7a13.7 13.7 0 0 1-2.3 3.05l-1.43-1.43A11.76 11.76 0 0 0 19.88 12c-1-1.18-3.86-5-7.88-5-.73 0-1.42.13-2.08.35L8.36 5.78A9.2 9.2 0 0 1 12 5Zm0 3.5a3.5 3.5 0 0 1 3.5 3.5c0 .42-.07.82-.2 1.2l-4.5-4.5c.38-.13.78-.2 1.2-.2Z"/></svg>
+            Verdecken
+          </button>
+        </div>
+      </section>
+
+      <section class="controls">
+        <div class="segmented" role="tablist" aria-label="Modus">
+          <button class="segment active" type="button" data-mode="random">Zufall</button>
+          <button class="segment" type="button" data-mode="choose">Auswahl</button>
+          <button class="segment" type="button" data-mode="custom">Eigene</button>
+        </div>
+
+        <label class="field-label" for="categorySelect">Kategorie</label>
+        <select id="categorySelect"></select>
+
+        <div class="chooser hidden" id="chooser">
+          <label class="field-label" for="personSearch">Figur suchen</label>
+          <input id="personSearch" type="search" placeholder="Name eingeben">
+          <div class="person-grid" id="personGrid"></div>
+        </div>
+
+        <form class="custom-form hidden" id="customForm">
+          <label class="field-label" for="customName">Eigene Figur</label>
+          <div class="inline-form">
+            <input id="customName" type="text" placeholder="z. B. Taylor Swift">
+            <button class="icon-button solid" type="submit" aria-label="Hinzufügen" title="Hinzufügen">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M11 5a1 1 0 1 1 2 0v6h6a1 1 0 1 1 0 2h-6v6a1 1 0 1 1-2 0v-6H5a1 1 0 1 1 0-2h6V5Z"/></svg>
+            </button>
+          </div>
+          <div class="person-grid" id="customGrid"></div>
+        </form>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
