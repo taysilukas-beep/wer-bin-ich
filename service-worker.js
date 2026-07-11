@@ -1,10 +1,10 @@
-const cacheName = "wer-bin-ich-v3";
+const cacheName = "wer-bin-ich-v5";
 const assets = [
   "./",
   "./index.html",
-  "./styles.css?v=3",
-  "./app.js?v=3",
-  "./manifest.webmanifest?v=3",
+  "./styles.css?v=5",
+  "./app.js?v=5",
+  "./manifest.webmanifest?v=5",
   "./icon.svg"
 ];
 
